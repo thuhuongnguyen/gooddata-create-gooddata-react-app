@@ -16,6 +16,12 @@ const Links = () => {
             <NavLink to={"/"} className={styles.Link} activeClassName={styles.LinkActive} exact>
                 Home
             </NavLink>
+            <NavLink to={"/geopushpin"} className={styles.Link} activeClassName={styles.LinkActive} exact>
+                GeoPushpin
+            </NavLink>
+            <NavLink to={"/geoVisualization"} className={styles.Link} activeClassName={styles.LinkActive} exact>
+                GeoPushpin Visualization
+            </NavLink>
         </>
     );
 };

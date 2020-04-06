@@ -8,8 +8,11 @@ import Logout from "./Logout";
 import Welcome from "./Welcome";
 import Home from "./Home";
 import Page from "../components/Page";
+import GeoPushpin from "./GeoPushpin";
+import GeoVisualization from "./GeoPushpin-visualization";
 
 import styles from "./AppRouter.module.scss";
+import { Visualization } from "@gooddata/react-components";
 // Uncomment these lines if you want to redirect unauthorized users to login form
 // import { useAuth } from "../contexts/Auth";
 // const RedirectIfNotLoggedIn = () => {
@@ -31,7 +34,9 @@ const AppRouter = () => {
                     <Route exact path="/dashboard" component={() => <Page>Dashboard</Page>} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/logout" component={Logout} />
-                    {/* DELETE THIS LINE  */} <Redirect to="/welcome" />
+                    <Route exact path="/geopushpin" component={GeoPushpin} />
+                    <Route exact path="/geoVisualization" component={GeoVisualization} />
+                    {/* DELETE THIS LINE  */} 
                     {/* Uncomment the next line if you want to redirect unauthorized users to login form */}
                     {/* <RedirectIfNotLoggedIn /> */}
                 </ProjectIdProvider>
